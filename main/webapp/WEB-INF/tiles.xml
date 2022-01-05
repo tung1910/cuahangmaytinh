@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+        Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="cosoBotri" template="/WEB-INF/botri/coso.jsp">
+        <put-attribute name="title" value="Siêu thị máy tính" />
+        <put-attribute name="tieude" value="/WEB-INF/botri/tieude.jsp"/>
+        <put-attribute name="chantrang" value="/WEB-INF/botri/chantrang.jsp"/>
+        <put-attribute name="noidung" value="..."/>
+    </definition>
+    <definition name="index" extends="cosoBotri">
+        <put-attribute name="title" value="Siêu thị máy tính"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/index.jsp"/>
+    </definition>
+    <definition name="chitietsanpham" extends="cosoBotri">
+        <put-attribute name="tille" value="Chi tiết sản phẩm"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/chitietsanpham.jsp"/>
+    </definition>
+    <definition name="giohang" extends="cosoBotri">
+        <put-attribute name="tille" value="Giỏ Hàng"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/giohang.jsp"/>
+    </definition>
+    <definition name="sanpham" extends="cosoBotri">
+        <put-attribute name="tille" value="Quản lý sản phẩm"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/sanpham.jsp"/>
+    </definition>
+    <definition name="dangnhap" extends="cosoBotri">
+        <put-attribute name="tille" value="Đăng Nhập"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/dangnhap.jsp"/>
+    </definition>
+    <definition name="dangky" extends="cosoBotri">
+        <put-attribute name="tille" value="Đăng Ký"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/dangky.jsp"/>
+    </definition>
+    
+    <definition name="cosoAdminBotri" template="/WEB-INF/botri/coso-admin.jsp">
+        <put-attribute name="title" value="Quản trị hệ thống bán hàng" />
+        <put-attribute name="trai" value="/WEB-INF/botri/admin-trai.jsp"/>
+        <put-attribute name="chantrang" value="/WEB-INF/botri/admin-chantrang.jsp"/>
+        <put-attribute name="noidung" value="..."/>
+    </definition>
+    <definition name="thongke-loaihang" extends="cosoAdminBotri">
+        <put-attribute name="tille" value="Thông kê sản phẩm theo loại"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/thongke-loaihang.jsp"/>
+    </definition>
+    <definition name="thongke-sanpham" extends="cosoAdminBotri">
+        <put-attribute name="tille" value="Thông kê doanh thu theo sản phẩm"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/thongke-sanpham.jsp"/>
+    </definition>
+    <definition name="thongke-sanpham-theothang" extends="cosoAdminBotri">
+        <put-attribute name="tille" value="Thông kê doanh thu theo tháng"/>
+        <put-attribute name="noidung" value="/WEB-INF/jsp/thongke-sanpham-theothang.jsp"/>
+    </definition>
+</tiles-definitions>
